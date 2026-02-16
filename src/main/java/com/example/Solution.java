@@ -1,9 +1,13 @@
 package com.example;
 
 public class Solution {
-    public int maxArea(int[] height) {
-        // ТВОЁ РЕШЕНИЕ ЗДЕСЬ
-        // Используй two pointers!
+    public int calculatemaxArea(int[] height) {
+        if (height == null) {
+            throw new IllegalArgumentException("Height array cannot be null");
+        }
+        if (height.length < 2) {
+            return 0;
+        }
         int left = 0;
         int right = height.length - 1;
         int maxArea = 0;
@@ -21,4 +25,5 @@ public class Solution {
 
         return maxArea;
     }
+
 }
